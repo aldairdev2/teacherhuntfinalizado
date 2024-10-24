@@ -7,78 +7,87 @@ const theme = createTheme({
       main: "#6b2aee",
       dark: "#581ecd",
     },
+    background: {
+      default: "#000", // Fundo preto para a página
+      paper: "#121212", // Fundo escuro para componentes como cards
+    },
     text: {
-      primary: "#707070",
+      primary: "#ffffff", // Texto branco
       secondary: "#9b9b9b",
-    },
-    error: {
-      main: "#fc3c00",
-    },
-    warning: {
-      main: "#fca600",
-    },
-    success: {
-      main: "#00d34d",
-    },
-    grey: {
-      50: "#FAFAFA",
-      100: "#F0F0F0",
-      200: "#D7D9DD",
-      300: "#C4C4C4",
-      400: "#9B9B9B",
-    },
-  },
-  breakpoints: {
-    values: {
-      xs: 300,
-      sm: 600,
-      md: 960,
-      lg: 1280,
-      xl: 1536,
     },
   },
   typography: {
     fontFamily: "Poppins, Roboto, sans-serif",
+    h1: {
+      fontWeight: 700,
+      fontSize: '2rem',
+    },
+    button: {
+      textTransform: 'none', // Sem caixa alta nos botões
+    },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          height: '100%',
+          width: '100%',
+          backgroundColor: "#000", // Fundo preto
+        },
+        body: {
+          backgroundColor: "#000", // Fundo preto
+          minHeight: "100vh",
+          width: "100vw",
+          margin: 0,
+          padding: 0,
+          overflowX: "hidden", // Impede o scroll lateral
+        },
+        '#__next': {
+          height: '100%',
+          width: '100%',
+          backgroundColor: "#000", // Fundo preto
+        }
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
           textTransform: "uppercase",
-          borderWidth: "2px",
+          padding: "12px 24px", // Ajuste de padding
+          borderWidth: "2px", // Largura da borda
+          backgroundColor: "transparent", // Evitar fundo branco nos botões
+          borderColor: "#6b2aee", // Garantir que a borda seja roxa
+          color: "#fff", // Texto branco
           ":hover": {
-            borderWidth: "2px",
+            backgroundColor: "#6b2aee", // Cor de fundo roxa no hover
+            borderColor: "#6b2aee", // Borda no hover também roxa
+            color: "#fff", // Texto branco no hover 
           },
         },
       },
       variants: [
         {
-          props: {
-            variant: "contained",
-          },
+          props: { variant: "contained" },
           style: {
             padding: "16px 40px",
-            backgroundColor: "#9661ff",
-          },
-        },
-        {
-          props: {
-            variant: "outlined",
-            color: "inherit",
-          },
-          style: {
+            backgroundColor: "#6b2aee", // Cor de fundo para botões contidos
+            color: "#fff", // Cor do texto
             ":hover": {
-              backgroundColor: "#9661ff",
+              backgroundColor: "#581ecd", // Cor mais escura no hover
             },
           },
         },
         {
-          props: {
-            variant: "outlined",
-            color: "error",
-          },
+          props: { variant: "outlined" },
           style: {
-            padding: "16px 40px",
+            borderColor: "#6b2aee", // Cor da borda
+            color: "#6b2aee", // Cor do texto
+            backgroundColor: "transparent", // Garantir que o fundo seja transparente
+            ":hover": {
+              backgroundColor: "#6b2aee", // Cor de fundo no hover
+              color: "#fff", // Texto branco no hover
+              borderColor: "#6b2aee", // Cor da borda no hover
+            },
           },
         },
       ],
@@ -87,6 +96,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textDecoration: "none",
+          color: "#fff", // Links brancos
           ":hover": {
             textDecoration: "underline",
           },
@@ -103,8 +113,8 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          background:
-            "linear-gradient(90deg, rgba(107,42,238,1)0%, rgba(2,0,36,1) 100%)",
+          backgroundColor: "#6b2aee", // Cor sólida para o header
+          color: "#fff",
         },
       },
     },

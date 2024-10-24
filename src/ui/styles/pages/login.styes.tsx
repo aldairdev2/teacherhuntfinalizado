@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles";
 
 export const BoxButtons = styled("div")`
   max-width: ${({ theme }) => theme.breakpoints.values.xs}px;
+  background: white;
 `;
 
 export const ButtonRecAccount = styled(Button)`

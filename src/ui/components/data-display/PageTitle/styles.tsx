@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 import { Typography, TypographyProps } from "@mui/material";
 
 export const PageTitleContainer = styled("div")`
-  margin: ${({ theme }) => theme.spacing(5, 0)};
+  margin: ${({ theme }) => theme.spacing(10, 0)};
   text-align: center;
 `;
 

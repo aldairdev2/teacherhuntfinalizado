@@ -58,7 +58,7 @@ export default function Base({ children }: PropsWithChildren) {
   return (
     <Box
       sx={{
-        bgcolor: common.white,
+        bgcolor: common.black,
         height: "100%",
         minHeight: "100vh",
         width: "100%",
@@ -117,6 +117,7 @@ function HeaderDesktop({ router, professor, onLogout }: HeaderDesktopProps) {
         justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
+        
       }}
     >
       <LinkLogo professor={professor} />

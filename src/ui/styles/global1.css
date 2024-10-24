@@ -1,0 +1,68 @@
+  html, body, #__next {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000 !important; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    font-family: Poppins, sans-serif;
+    overflow-x: hidden !important; /* Esconde o overflow lateral */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #__next {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000 !important; /* Certificar fundo preto */
+  }
+
+  main {
+    flex-grow: 1; /* Garante que o main ocupe o espaço restante */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000 !important; /* Certificar fundo preto */
+  }
+
+  header {
+    width: 100%;
+    background-color: #000 !important;
+  }
+
+  .ball {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #020f86;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0; /* As bolas decorativas devem ficar atrás do conteúdo */
+  }
+
+  .ball.top {
+    top: -60px;
+    left: -100px;
+  }
+
+  .ball.bottom {
+    bottom: -60px;
+    right: -100px;
+    background-color: #3549b1;
+  }
+
+  body, #__next {
+    box-sizing: border-box;
+    background-color: #000 !important; /* Mais uma vez, certificando fundo preto */
+  }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }

@@ -9,8 +9,17 @@ import {
   TextField,
 } from "@mui/material";
 import { BoxButtons, ButtonRecAccount } from "@styles/pages/login.styes";
+/*import { Navigate, NavigationType, useNavigate } from "react-router-dom";*/
+/*import { Router, useNavigate } from "react-router-dom";*/
+import { useRouter } from "next/router";
+
 
 export default function LoginPage() {
+  const router = useRouter();
+
+  /*const navigate = useNavigate();*/
+  
+
   const {
     messageErro,
     setValuesLogin,
@@ -78,7 +87,10 @@ export default function LoginPage() {
           >
             {!loading ? "Acessar" : <CircularProgress color="primary" />}
           </Button>
-          <ButtonRecAccount size={"small"} fullWidth>
+          <ButtonRecAccount 
+          size={"small"} 
+          fullWidth 
+          onClick={() => router.push("/cadastro_aluno")}>
             Não possui conta? Cadastre-se agora
           </ButtonRecAccount>
         </BoxButtons>
